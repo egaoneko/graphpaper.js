@@ -1,0 +1,57 @@
+{
+  "name": "graphpaper.js",
+  "version": "0.0.1",
+  "description": "graphpaper.js",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm install -g webpack && npm install",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.config-page.js --progress --colors --open --hot",
+    "watch": "webpack --config ./webpack.config.js --progress --colors --watch",
+    "prebuild": "eslint lib test",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --progress --colors --hide-modules",
+    "test": "karma start",
+    "prepublish": "npm test"
+  },
+  "repository": {
+    "url": "https://github.com/egaoneko/graphpaper.js.git",
+    "type": "git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/egaoneko/graphpaper.js/issues"
+  },
+  "homepage": "hhttps://github.com/egaoneko/graphpaper.js#readme",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-register": "^6.24.1",
+    "chai": "^3.5.0",
+    "cross-env": "^3.2.3",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.13.1",
+    "eslint-loader": "^1.6.1",
+    "imports-loader": "^0.7.0",
+    "istanbul": "^0.4.5",
+    "karma": "^1.6.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-mocha": "^1.3.0",
+    "karma-webpack": "^2.0.3",
+    "mocha": "^3.2.0",
+    "node-sass": "^4.3.0",
+    "sass-loader": "^4.1.1",
+    "sinon": "^1.17.7",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.2.1"
+  },
+  "dependencies": {
+    "enumify": "^1.0.4",
+    "lodash": "^4.17.4",
+    "sylvester-es6": "0.0.2",
+    "uuid": "^3.0.1"
+  }
+}

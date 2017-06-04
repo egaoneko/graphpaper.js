@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: __dirname + "/dist",
     filename: "graphpaper.js",
-    libraryTarget: "var", // export itself to a global var
+    libraryTarget: "umd", // export itself to a global var
     library: "graphpaper" // name of the global var: "graphpaper"
   },
   module: {

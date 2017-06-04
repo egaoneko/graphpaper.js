@@ -2,7 +2,7 @@
   "name": "graphpaper.js",
   "version": "0.0.1",
   "description": "graphpaper.js",
-  "main": "index.js",
+  "main": "./dist/graphpaper.js",
   "scripts": {
     "setup": "npm install -g webpack && npm install",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.config-page.js --progress --colors --open --hot",
@@ -16,8 +16,8 @@
     "url": "https://github.com/egaoneko/graphpaper.js.git",
     "type": "git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Donghyun Seo",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/egaoneko/graphpaper.js/issues"
   },
@@ -58,5 +58,8 @@
     "lodash": "^4.17.4",
     "sylvester-es6": "0.0.2",
     "uuid": "^3.0.1"
+  },
+  "shim": {
+    "exports": "graphpaper"
   }
 }

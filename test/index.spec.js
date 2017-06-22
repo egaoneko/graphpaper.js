@@ -7,4 +7,8 @@ describe('Index', () => {
   it('GraphPaper', () => {
     assert.property(graphPaper, "GraphPaper");
   });
+
+  it('Grid', () => {
+    assert.property(graphPaper, "Grid");
+  });
 });

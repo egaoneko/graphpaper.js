@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample</title>
+
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    .box {
+      position: relative;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .box > canvas {
+      border: solid 1px;
+    }
+  </style>
+</head>
+<body>
+<h1>Grid</h1>
+<script src="../graphpaper.js"></script>
+<script>
+  window.onload = function () {
+    var grid;
+
+    grid = addBox("Draw");
+    grid.renderAll();
+  };
+
+  function addBox(name) {
+    var box = document.createElement('div');
+    box.className = 'box';
+
+    var h2 = document.createElement('h2');
+    h2.innerText = name;
+    box.appendChild(h2);
+
+    var canvas = document.createElement('canvas');
+    box.appendChild(canvas);
+
+    var grid = new graphpaper.GraphPaper(canvas);
+    grid.width = 200;
+    grid.height = 200;
+
+    document.body.appendChild(box);
+    return grid;
+  }
+
+  function addRow() {
+    document.body.appendChild(document.createElement('br'));
+  }
+</script>
+</body>
+</html>
